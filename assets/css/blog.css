@@ -2,9 +2,9 @@
   Blog Styles
 */
 
-/*
-  Tags
-*/
+
+
+
 a {
   text-decoration: none;
 }
@@ -46,7 +46,7 @@ li {
   margin: 1rem;
 }
 
-main {
+main{
   flex-direction: column;
   gap: 1em;
   padding: 1rem;
