@@ -25,19 +25,19 @@
   <section>
     <h2> What is in your mind?</h2>
   <form style="display: inline-block;">
-    <label for="username" id="username">Username:</label>
-    <input type="text" id="#username" name="username" required style="width: 100%;">
-    <label for="title" id="title">Title:</label>
-    <input type="text" id="#title" name="title" required>
-    <label for="content" id="content">Content:</label>
-    <textarea id="content" name="#content" required></textarea>
+    <!--<label for="username" id="username">Username:</label>-->
+    <input name="username" id="username" type="text" autocomplete="username" required style="width: 100%;">
+   <!-- <label for="title" id="title">Title:</label>-->
+    <input name="title" id="title" type="text" autocomplete="title" required>
+  
+    <textarea id="content" name="content" required></textarea>
     <p id="error"></p>
-    <button type="submit" id="#submit">Submit</button>
-    </a>
+   <button type="submit" id="submit">Submit</button>
   </form>
   </section>
 </div>
 </main>
+<script src="/assets//js/form.js"></script>
 </body>
 
 </html>

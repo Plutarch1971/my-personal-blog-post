@@ -17,7 +17,7 @@ body {
   font-family: sans-serif;
 }
 
-​h1,
+h1,
 h2,
 h3,
 h4,
@@ -62,7 +62,7 @@ textarea {
   margin-bottom: 10px; /* Add some spacing between elements */
 }
 
-​ol,
+ol,
 ul {
   list-style: none;
 }
@@ -109,7 +109,7 @@ ul {
 
 button{
   background-color: var(--dark-accent);
-  color: var(--light);
+  color: var(--light-accent);
   width: 200px;
   margin-left: 10px;
   border: none;
@@ -181,7 +181,15 @@ main {
   color: var(--light);
   border-top: solid .5rem var(--disabled);
 }
-
+.dark button{
+  background-color: var(--light-accent);
+  color: var(--light);
+  
+}
+.light button{
+  color: var(--light);
+  background-color: var(--dark-accent);
+}
 .light header,
 .light footer {
   background-color: var(--light);

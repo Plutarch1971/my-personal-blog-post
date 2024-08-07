@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <header><h1>Testing Local Storage</h1></header>
+    <window class="prompt">Enter Name</window>
+    <input type="text" id="name" name="name" required>
+    <window class="prompt">Enter Age</window>
+    <input type="text" id="age" name="age" required>
+    <button type="submit" id="submit">Submit</button>
+</body>
+<script>
+    const name = document.getElementById('name');
+    const age = document.getElementById('age');
+    const submit = document.getElementById('submit');
+
+    const formSubmission = (e) => {
+        e.preventDefault();
+        const myObject = {
+            name: name.value,
+            age: age.value
+        };
+        console.log(myObject);
+    
+        const myJSON = JSON.stringify(myObject);
+        localStorage.setItem('myObj', myJSON);
+        
+        const readMyObject = JSON.parse(localStorage.getItem(myObj));
+        console.log(readMyObject);
+    }
+        submit.addEventListener('click', formSubmission);
+</script>
+</html>

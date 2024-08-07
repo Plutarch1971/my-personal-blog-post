@@ -1,40 +1,103 @@
-// TODO: Create a variable that selects the form element
-const usernameEl = document.getElementById("username");
-const titleEl = document.getElementById("title");
-const contentEl = document.getElementById("content");
-const submitBtn = document.getElementById("submit");
+document.addEventListener('DOMContentLoaded', function() {
+    const usernameEl = document.getElementById("username");
+    const titleEl = document.getElementById("title");
+    const contentEl = document.getElementById("content");
+    const submitBtn = document.getElementById("submit");
+console.log(usernameEl);
+console.log(titleEl);
+console.log(contentEl);
+console.log(submitBtn);
+    const formSubmission = function(event) {
+        event.preventDefault(); 
+        
+        const storeLocalStorage = function() {
+            if (!usernameEl.value || !titleEl.value || !contentEl.value) {
+                alert("Please fill in all fields"); 
+                return; 
+            }
+            
+            const formData = {
+                username: usernameEl.value,
+                title: titleEl.value,
+                content: contentEl.value
+            };
+            
+            localStorage.setItem('formData', JSON.stringify(formData));
+            console.log(localStorage);
+        };
 
-// TODO: Create a function that handles the form submission. Grab the form data and store it in local storage, then redirect to the blog page using the `redirectToBlog` function. If the form is submitted with missing data, display an error message to the user.
-const formSubmission = function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+        const readLocalStorage = function() {
+            const storedData = localStorage.getItem('formData');
+            return storedData ? JSON.parse(storedData) : {};
+        };
 
-    // Check if any of the form fields are empty
-    if (!usernameEl.value || !titleEl.value || !contentEl.value) {
-        alert("Please fill in all fields"); // Display an error message
-        return; // Exit the function
+        const formData = readLocalStorage();
+        console.log(formData);
+    };
+    const blogPageURL = 'https://github.com/Plutarch1971/my-personal-blog-post.git/blog.html';
+    
+    function redirectToBlog() { 
+        location.assign(blogPageURL);
     }
+        const readLocalStorage = function() {
+    const storedData = localStorage.getItem('formData');
+    return storedData ? JSON.parse(storedData) : {};
+};
 
-    // Store the form data in local storage
+    submitBtn.addEventListener('click', formSubmission);
+    
+});
+
+
+
+
+
+
+
+/*document.addEventListener('DOMContentLoaded', function() {
+    const usernameEl = document.getElementById("username");
+    const titleEl = document.getElementById("title");
+    const contentEl = document.getElementById("content");
+    const submitBtn = document.getElementById("submit");
+
+ 
+    const formSubmission = function(event) {
+    event.preventDefault(); 
+    
+    const storeLocalStorage = function(){
+    
+    if (!usernameEl.value || !titleEl.value || !contentEl.value) {
+        alert("Please fill in all fields"); 
+        return; 
+    }
+    
     const formData = {
         username: usernameEl.value,
         title: titleEl.value,
         content: contentEl.value
     };
-    localStorage.setItem("formData", JSON.stringify(formData));
-
-    redirectToBlog(); // Redirect to the blog page
+    
+    localStorage.setItem('formData', JSON.stringify(formData));
+    storeLocalStorage();
+    console.log(localStorage);
+    console.log(formSubmission);
 };
+const readLocalStorage = function(){
+    return JSON.parse(localStorage.getItem('formData')) || [];
+    
+}
 
-function redirectToBlog() {
+    //formSubmission();
+   // displayBlogData();
+   const formData = readLocalStorage();
+   console.log(formData);
+}   
+    submitBtn.addEventListener('click', formSubmission);
+       
+    // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
     const blogPageURL = 'https://github.com/Plutarch1971/my-personal-blog-post.git/blog.html';
+    function redirectToBlog() { 
     location.assign(blogPageURL);
-}
-
-submitBtn.addEventListener('click', formSubmission);
-
-// TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
-const blogPageURL = 'https://github.com/Plutarch1971/my-personal-blog-post.git/blog.html';
-function redirectToBlog() { 
-    location.assign(blogPageURL);
-}
-submitBtn.addEventListener('click', formSubmission, redirectToBlog);
+    }
+   
+});*/

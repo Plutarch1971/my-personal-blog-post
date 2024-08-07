@@ -2,17 +2,17 @@
 const mainEl = document.querySelector("main");
 const backBtn = document.querySelector("back");
 // TODO: Create a function that builds an element and appends it to the DOM
-const displayBlogData = function() {
+const displayBlogData = function(data) {
         // Sample data to display
-         const data = ["title", "content", "username", ];
-
+         
+         data = readLocalStorage();
         // Get the container element where data will be displayed
         let container = document.getElementById("blogData"); // Fix: Add quotes around "blogData"
 
         // Display data item-wise
         data.forEach(function(item) {
             // Create a new element for each item
-            var newItem = document.createElement("div");
+            let newItem = document.createElement("div");
             newItem.textContent = item;
 
             // Append the new element to the container
@@ -33,7 +33,7 @@ const noPosts = () => {
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
 const renderBlogList = (data) => {
     // check if data exists
-    if (data.lenth> 0){
+    if (data.length> 0){
         // call the displaly blog data function
         displayBlogData(data);
     }
@@ -45,4 +45,10 @@ const renderBlogList = (data) => {
 // TODO: Call the `renderBlogList` function
 renderBlogList(data);
 // TODO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
-backBtn.addEventListener("click", redirectPage);
+const redirectLandingPage = function () {
+    const redirectURL = 'https://github.com/Plutarch1971/my-personal-blog-post.git/index.html';
+    location.assign(redirectURL);
+
+  }
+
+backBtn.addEventListener("click", redirectLandingPage);
