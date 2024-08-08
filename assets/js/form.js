@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     function redirectToBlog() { 
-        location.assign('https://github.com/Plutarch1971/my-personal-blog-post.git/blog.html');
+        location.assign('https://plutarch1971.github.io/my-personal-blog-post//blog.html');
         redirectToBlog();
     }
         const readLocalStorage = function() {
