@@ -13,8 +13,10 @@ aside {
   );
   clip-path: circle(20rem at center);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%; /* Set the height to 100% to fill the parent container */
 }
 
 aside, 
