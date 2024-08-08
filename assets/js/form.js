@@ -3,10 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const titleEl = document.getElementById("title");
     const contentEl = document.getElementById("content");
     const submitBtn = document.getElementById("submit");
-console.log(usernameEl);
-console.log(titleEl);
-console.log(contentEl);
-console.log(submitBtn);
+    
+
     const formSubmission = function(event) {
         event.preventDefault(); 
         
@@ -24,26 +22,37 @@ console.log(submitBtn);
             
             localStorage.setItem('formData', JSON.stringify(formData));
             console.log(localStorage);
+            
         };
+        storeLocalStorage();
 
         const readLocalStorage = function() {
             const storedData = localStorage.getItem('formData');
             return storedData ? JSON.parse(storedData) : {};
+           
         };
-
+        
         const formData = readLocalStorage();
-        console.log(formData);
+       // console.log(formData);
     };
-    const blogPageURL = 'https://github.com/Plutarch1971/my-personal-blog-post.git/blog.html';
     
     function redirectToBlog() { 
-        location.assign(blogPageURL);
+        location.assign('https://github.com/Plutarch1971/my-personal-blog-post.git/blog.html');
+        redirectToBlog();
     }
         const readLocalStorage = function() {
     const storedData = localStorage.getItem('formData');
     return storedData ? JSON.parse(storedData) : {};
+        
 };
-
-    submitBtn.addEventListener('click', formSubmission);
+    const readData = readLocalStorage();
+    console.log(readData);
+    
+    if (submitBtn) {
+        submitBtn.addEventListener('click', formSubmission);
+    } else {
+        console.log('Submit button not found');
+    }
+    
     
 });
