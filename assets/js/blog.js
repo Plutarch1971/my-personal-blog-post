@@ -46,7 +46,7 @@ const renderBlogList = (data) => {
 renderBlogList(data);
 // TODO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
 const redirectLandingPage = function () {
-    const redirectURL = 'https://github.com/Plutarch1971/my-personal-blog-post.git/index.html';
+    const redirectURL = 'https://plutarch1971.github.io/my-personal-blog-post/index.html';
     location.assign(redirectURL);
 
   }
