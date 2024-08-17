@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>My First Blog</title>
+  <title>My Blog Post</title>
 
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <link rel="stylesheet" href="./assets/css/blog.css" />
@@ -17,17 +17,17 @@
 <body>
   <!-- TODO: Create header, main, and footer elements -->
   
-  <div class="header">
     <header>
       <h1>My First Blog</h1>
-    </header>
-    <div>
-        <button id="back">Back</button>
-       <!--<label for="toggle"></label>-->
-        <button id="toggle">Dark Mode</button>  
+      <div>
+        <button id="back">Back</button> 
+        <input id="toggle" type="checkbox">
+        <label for="toggle" id="label-toggle"></label>
     </div>
-  </div> 
-  <main id="data-Container">
+  
+    </header>
+    <main> 
+ <!-- <main id="data-Container">-->
   </main>
    <footer>
     <ul>
@@ -35,7 +35,8 @@
       <li>Blog: Full-Stack Blog</li>
       <li>Email: matthew@email.com</li>
     </ul>
-    <p id="love">Made with<span>love emoji</span> by Matthew</p>
+    <p id="love">Made with<span>&#10084;&#65039;</span>by Matthew</p>
+    <p>&copy; 2024 All rights reserved.</p>
   </footer>
 
 </body>

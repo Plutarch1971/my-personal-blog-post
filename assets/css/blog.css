@@ -15,6 +15,7 @@ article {
   border-radius: 4px;
   padding: 1rem;
   position: relative;
+  margin-bottom: 10px;
 }
 
 article blockquote {
@@ -29,33 +30,71 @@ article h2 {
 }
 
 article p {
- /* position: absolute;*/
+  /* position: absolute;*/
   left: 1rem;
   bottom: 0.5rem;
   opacity: .75;
   margin-bottom: 10px;
 }
 
-footer {
+/* footer {
   position: fixed;
   inset: 0;
-  top: calc(100% - 5rem);
-}
+  top: calc(100% - 11rem);
+} */
 
-li {
-  margin: 1rem;
-}
+/* footer{
+  position: relative;
+  
+} */
+ footer{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width:100%;
+  padding: 1rem;
+  background-color: var(--light-accent);
+  /*z-index: 1000;/* Ensure the footer is on top of the main content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+/* li {
+  margin: 0.5rem;
+} */
+ 
 
-main{
+ul{
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column ;
+}
+li{
+  margin-bottom:0;  
+  position: relative;/* To align p element*/
+}
+/* main{
   flex-direction: column;
   gap: 1em;
   padding: 1rem;
-  height: calc(100vh - 11rem);
- 
+  /*height: calc(100vh - 11rem);
+  height: calc(100vh - 20rem);
+  width: 100%;
   overflow-y: scroll;
   justify-content: flex-start;
+} */
+ main {
+  flex-grow: 1; /* Allow main to grow and take up more space */
+  padding: 1rem;
+  width: 100%;
+  height: calc(100vh - 11rem);
+  overflow-y: auto; /* Ensure the main content is scrollable if it overflows */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-
 ul {
   list-style: none;
 }
@@ -105,7 +144,16 @@ ul {
   border-style: inset;
   background-color: var(--dark-accent-action);
 }
-
+ 
 #love {
-  text-align: center;
+  margin: 0;
+  position: relative;/* Keep relative to the parent element */
+
 }
+/* #love {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 45%;
+  transform: translateY(-50%);
+} */

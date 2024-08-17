@@ -7,17 +7,19 @@
 */
 aside {
   background: linear-gradient(
-    var(--light-accent), 
-    var(--circle-color), 
+    var(--light-accent),
+    var(--circle-color),
     var(--dark-accent)
   );
-  clip-path: circle(20rem at center);
+  clip-path: circle(13rem at center);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
 
-aside, 
+aside,
 section {
   flex: 1 1 50%;
 }
@@ -38,7 +40,7 @@ form > *:not(label) {
   margin: 1rem 0;
   padding: 0.5rem;
 }
- 
+
 
 h2 {
   text-align: center;
@@ -79,7 +81,10 @@ section {
   align-items: stretch;
   flex-flow: column wrap;
   justify-content: center;
-  border-left: double 1rem;
+  align-items: center;
+  border: 1px solid black;
+  background-color: cornsilk;
+  /*border-left: double 1rem;*/
 }
 
 /*

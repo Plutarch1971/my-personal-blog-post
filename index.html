@@ -12,7 +12,7 @@
     <script defer src="./assets/js/logic.js" type="text/javascript"></script>
     <script defer src="./assets/js/form.js" type="text/javascript"></script>
   </head>
-<body>
+<body class="index-body">
   
 <header></header>
 <main>
@@ -25,19 +25,20 @@
   <section>
     <h2> What is in your mind?</h2>
   <form style="display: inline-block;">
-    <!--<label for="username" id="username">Username:</label>-->
-    <input name="username" id="username" type="text" autocomplete="username" required style="width: 100%;">
-   <!-- <label for="title" id="title">Title:</label>-->
-    <input name="title" id="title" type="text" autocomplete="title" required>
-  
-    <textarea id="content" name="content" required></textarea>
+    <label for="username" id="label-username">Username:</label>
+    <input name="username" id="username" type="text" autocomplete="username" style="width: 100%;">
+    <label for="title" id="label-title">Title:</label>
+    <input name="title" id="title" type="text" autocomplete="title">
+    <label for="content" id="label-content">Content:</label>
+    <textarea id="content" name="content"></textarea>
     <p id="error"></p>
    <button type="submit" id="submit">Submit</button>
   </form>
   </section>
 </div>
 </main>
-<script src="/assets//js/form.js"></script>
+<footer></footer>
+  
 </body>
 
 </html>
