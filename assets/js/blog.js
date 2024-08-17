@@ -2,7 +2,6 @@ const mainEl = document.querySelector("main");
 const backBtn = document.querySelector("#back");
 
 
-
 const displayBlogData = function(data) {
   // Get the container element where data will be displayed
 
@@ -28,24 +27,21 @@ const displayBlogData = function(data) {
 };
 
 const noPosts = () => {
+  mainEl.innerHTML = ""; // Clear the main element
   // Create a new element
   let noPostsEl = document.createElement("div");
   noPostsEl.textContent = "No posts to display";
   // Append the new element to the main element
   mainEl.appendChild(noPostsEl);
 };
-
-const renderBlogList = (data) => {
-  // Check if data exists
-  if (!data) {
-    // Call the noPosts function
+ //noPosts();
+const renderBlogList = function(data) {
+  if (data.length === 0) {
     noPosts();
-    return;
+  } else {
+    displayBlogData(data);
   }
-  // Call the displayBlogData function
-  displayBlogData(data);
-
-};
+}
 
 // Call the renderBlogList function with the appropriate data
 const blogData = readLocalStorage(); // Read data from local storage

@@ -1,10 +1,11 @@
 // TODO: Create logic to toggle the light/dark mode styles for the page and circle. The mode should be saved to local storage.
 document.addEventListener('DOMContentLoaded', function() {
     const toggleSwitch = document.getElementById('toggle');
-    console.log(toggleSwitch);
+    //console.log(toggleSwitch);
     if(toggleSwitch){//if the toggle switch exists
     const switchTheme = function(){
       const body = document.body;
+      
       
       if (body.classList.contains("dark")){
         body.classList.remove("dark");
@@ -23,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('light');
         //switchTheme()
       }
-  
+  const circleColor = body.classList.contains('dark') ? '#4266f5' : '#ffb100';
+  document.documentElement.style.setProperty('--circle-color', circleColor);  
+  document.style.setProperty('data-theme', currentTheme);
     }
     toggleSwitch.addEventListener('click', switchTheme);
   }else{

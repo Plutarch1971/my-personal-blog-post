@@ -4,10 +4,6 @@ const titleEl = document.getElementById("title");
 const contentEl = document.getElementById("content");
 const submitBtn = document.getElementById("submit");
 
-console.log("Username testing:" + usernameEl);
-console.log(titleEl);
-console.log(contentEl);
-console.log(submitBtn);
 
 const redirectToBlog = function() {
   redirectPage('blog.html');
