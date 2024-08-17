@@ -26,11 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   const circleColor = body.classList.contains('dark') ? '#4266f5' : '#ffb100';
   document.documentElement.style.setProperty('--circle-color', circleColor);  
-  document.style.setProperty('data-theme', currentTheme);
+  
     }
     toggleSwitch.addEventListener('click', switchTheme);
-  }else{
-    console.log('toggle switch does not exist');
   }
   });
   
