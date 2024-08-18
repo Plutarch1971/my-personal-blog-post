@@ -103,3 +103,8 @@ section {
   position: absolute;
   bottom: -2rem;
 }
+@media (max-width: 768px) {
+  aside{
+    clip-path: circle(5rem at center);
+  }
+}

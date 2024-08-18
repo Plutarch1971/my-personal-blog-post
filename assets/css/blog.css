@@ -37,16 +37,7 @@ article p {
   margin-bottom: 10px;
 }
 
-/* footer {
-  position: fixed;
-  inset: 0;
-  top: calc(100% - 11rem);
-} */
 
-/* footer{
-  position: relative;
-  
-} */
  footer{
   position: fixed;
   bottom: 0;
@@ -59,9 +50,7 @@ article p {
   justify-content: space-between;
   align-items: center;
  }
-/* li {
-  margin: 0.5rem;
-} */
+
  
 
 ul{
@@ -75,16 +64,6 @@ li{
   margin-bottom:0;  
   position: relative;/* To align p element*/
 }
-/* main{
-  flex-direction: column;
-  gap: 1em;
-  padding: 1rem;
-  /*height: calc(100vh - 11rem);
-  height: calc(100vh - 20rem);
-  width: 100%;
-  overflow-y: scroll;
-  justify-content: flex-start;
-} */
  main {
   flex-grow: 1; /* Allow main to grow and take up more space */
   padding: 1rem;
@@ -150,10 +129,11 @@ ul {
   position: relative;/* Keep relative to the parent element */
 
 }
-/* #love {
-  position: absolute;
-  text-align: center;
-  top: 100px;
-  left: 45%;
-  transform: translateY(-50%);
-} */
+@media and (max-width: 768px){
+  main{
+    height: calc(100vh - 6rem);
+  }
+  h1{
+    font-size: 1rem;
+  }
+}

@@ -19,7 +19,6 @@ body {
   margin-bottom: 1rem ;
 }   
  .index-body{
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -91,12 +90,7 @@ ul {
   list-style: none;
 }
 
-/*
-  General Styles
-*/
-/*
-  Universal
-*/
+
 :root {
   --light: #fff;
   --light-accent: #f9f9fb;
@@ -114,21 +108,17 @@ ul {
   transition: background-color ease-in .5s;
 }
 
-/*
-  Tags
-*/
+
 
 
 .header-buttons {
   display: flex;
   align-items: flex-end;
-  /* align-items: center; */
   gap: 10px; /* Adjust the gap between the button and checkbox */
 }
 
 
 header {
-  /*margin-top: 50px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -151,8 +141,7 @@ button{
   border: none;
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  /* margin: 1rem; */
-  /* align-items: flex-end; */
+ 
 }
 /* To hide the default checkbox */
 input[type="checkbox"] {
@@ -168,7 +157,8 @@ input[type="checkbox"] + label {
   border-radius: 50%;
   border: 2px solid var(--circle-color);/* Add a border */
   cursor: pointer;
-  margin-left: 10px;?/* Add some spacing between the checkbox and the text */
+  margin-left: 10px;/* Add some spacing between the checkbox and the text */
+  padding: 2%;
 }
 /* Style the custom checkbox when checked */
 input[type="checkbox"]:checked + label {
@@ -208,7 +198,8 @@ aside > h2 {
    gap:1rem;
   padding: 3rem; 
   
-} 
+}  
+
 
 .dark header,
 .dark footer {
@@ -252,23 +243,21 @@ aside > h2 {
   }
   .grid {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
   }
-}
-h1 {
-  font-size: calc(2rem + 1vw);
-}
-/*
+  main{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: none;
+  }
+  h1{
+    font-size: 1rem;
+  }
 
-  IDs
-*/
-/* #toggle {
-  font-size: 1.0em;
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  border: none;
-  cursor: pointer;
-  text-shadow: 0px 0px .5rem var(--light-accent);
-} */
+aside > h2 {
+  /* font-size: 2rem; */
+  color: white;
+  text-shadow: 1px 1px 1px var(--dark-accent);
+  margin-bottom: 2rem; /* Add margin at the bottom to prevent overlap */
+}
+}
