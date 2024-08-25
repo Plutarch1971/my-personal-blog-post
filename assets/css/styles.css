@@ -18,14 +18,14 @@ body {
   align-items: center;
   margin-bottom: 1rem ;
 }   
- .index-body{
+ /* .index-body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh; /* Ensure the body takes up the full viewport height*/
+  min-height: 100vh; /* Ensure the body takes up the full viewport height
   line-height: 1;
   font-family: sans-serif;
-} 
+}  */
 
 /* Default light theme */
 header {
@@ -47,7 +47,9 @@ h5,
 h6 {
   font-size: 100%;
 }
-
+/* div{
+  padding: 5rem;
+} */
 input,
 select,
 option,
@@ -125,6 +127,8 @@ header {
   justify-content:space-between;
   align-items: center;
   height: 100px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 header h1 {
   flex: 1;
@@ -165,15 +169,16 @@ input[type="checkbox"]:checked + label {
   background-color: #007bff; /* Change color when checked */
 }
 
-
+/*
 header,
 footer {
   padding: 2rem;
 }
+*/
 
 main {
   width: 100%;
-  height: calc(100vh - 6rem);
+/*height: calc(100vh - 6rem);*/
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -194,9 +199,10 @@ aside > h2 {
   width:100%;
   height: 100%;
   grid-template-rows:repeat(1,1fr);
-  grid-template-columns:repeat(2,1fr);
-   gap:1rem;
-  padding: 3rem; 
+  grid-template-columns:repeat(1,1fr);
+  gap:1rem;
+  padding: 5rem; 
+  
   
 }  
 
@@ -237,7 +243,7 @@ aside > h2 {
   color: var(--dark);
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   body {
     font-size: 14px;
   }
@@ -254,10 +260,10 @@ aside > h2 {
     font-size: 1rem;
   }
 
-aside > h2 {
-  /* font-size: 2rem; */
-  color: white;
-  text-shadow: 1px 1px 1px var(--dark-accent);
-  margin-bottom: 2rem; /* Add margin at the bottom to prevent overlap */
-}
-}
+  aside > h2 {
+    /* font-size: 2rem; 
+    color: white;
+    text-shadow: 1px 1px 1px var(--dark-accent);
+    margin-bottom: 2rem; /* Add margin at the bottom to prevent overlap 
+  }
+} */

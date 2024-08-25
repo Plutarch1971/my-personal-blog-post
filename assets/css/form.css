@@ -1,6 +1,17 @@
-/*
-  Form Styles
-*/
+
+.grid-form {
+  display:grid; 
+  width:100%;
+  height: 100%;
+  grid-template-rows:repeat(1,1fr);
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+  padding: 5rem; 
+  
+  
+}  
+
+
 
 /*
   Tags
@@ -17,6 +28,8 @@ aside {
   align-items: center;
   padding: 10px;
   margin: 10px;
+  height: 300px;
+  width: 300px;
 }
 
 aside,
@@ -108,3 +121,10 @@ section {
     clip-path: circle(5rem at center);
   }
 }
+@media (max-width: 390px) {
+  .grid-form{
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+

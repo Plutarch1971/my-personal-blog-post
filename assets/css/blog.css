@@ -129,11 +129,20 @@ ul {
   position: relative;/* Keep relative to the parent element */
 
 }
-@media and (max-width: 768px){
+@media screen  and (max-width: 390px){
+  body {
+    font-size: 14px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
   main{
-    height: calc(100vh - 6rem);
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: none;
   }
   h1{
-    font-size: 1rem;
+    font-size: 20px;
   }
 }
