@@ -10,6 +10,7 @@
   background-color: var(--dark);
   color: var(--light);
 }
+
 body {
   min-height: 100%;
   line-height: 1;
@@ -18,14 +19,7 @@ body {
   align-items: center;
   margin-bottom: 1rem ;
 }   
- /* .index-body{
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh; /* Ensure the body takes up the full viewport height
-  line-height: 1;
-  font-family: sans-serif;
-}  */
+ 
 
 /* Default light theme */
 header {
@@ -127,8 +121,8 @@ header {
   justify-content:space-between;
   align-items: center;
   height: 100px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 header h1 {
   flex: 1;
@@ -169,12 +163,6 @@ input[type="checkbox"]:checked + label {
   background-color: #007bff; /* Change color when checked */
 }
 
-/*
-header,
-footer {
-  padding: 2rem;
-}
-*/
 
 main {
   width: 100%;
@@ -211,6 +199,7 @@ aside > h2 {
 .dark footer {
   background-color: var(--dark);
   color: var(--light);
+  /*height: 100%;*/ 
 }
 
 
@@ -218,12 +207,17 @@ aside > h2 {
   background-color: var(--dark-accent);
   color: var(--light);
   border-top: solid .5rem var(--disabled);
-  border-bottom: solid .5rem var(--disabled);
+  border-bottom: solid .5rem var(--disabled); 
+  /*padding-right: 350px;*/
 }
 .dark button{
   background-color: var(--light-accent);
   color: var(--dark);
 
+}
+.dark div > * {
+  border: solid .5rem var(--disabled);
+  
 }
 .light button{
   color: var(--light);
@@ -242,28 +236,17 @@ aside > h2 {
   background-color: var(--light-accent);
   color: var(--dark);
 }
-
-/*@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+@media screen and (min-width: 768px) {
   .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
   }
-  main{
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: none;
-  }
-  h1{
-    font-size: 1rem;
-  }
-
-  aside > h2 {
-    /* font-size: 2rem; 
-    color: white;
-    text-shadow: 1px 1px 1px var(--dark-accent);
-    margin-bottom: 2rem; /* Add margin at the bottom to prevent overlap 
-  }
-} */
+  
+  
+}

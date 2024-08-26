@@ -65,6 +65,7 @@ li{
   position: relative;/* To align p element*/
 }
  main {
+  display: flex;
   flex-grow: 1; /* Allow main to grow and take up more space */
   padding: 1rem;
   width: 100%;
